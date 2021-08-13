@@ -1,0 +1,23 @@
+extends layout 
+
+
+block content 
+    .container-fluid.mt-3
+        .row 
+            .col-2
+                .list-group.list-group-flush.small
+                    a.list-group-item.list-group-item-action(href="",style="background:#192a56;color:white") Study Topics
+                    each cat in topics
+                        a.list-group-item.list-group-item-action(href="") #{cat.title}
+                        
+            .col-8
+                .card.mb-2
+                    .card-body 
+                        .row 
+                            .col-3 
+                                img(src="/photos/"+post.image, alt="").card-img-top
+                            .col 
+                                h5 P_title => #{post.p_title}
+                                h4 Topic_title => #{post.title}
+                                h6.small Post_Content =>  #{post.content}
+                                    

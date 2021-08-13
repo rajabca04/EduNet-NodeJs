@@ -33,9 +33,6 @@ app.use(cookie())
 //form-multipart form data
 app.use(upload.array());
 
-
-
-
 app.listen(3000,function(){
     console.log("your project runing on http://127.0.0.1:3000")
 })

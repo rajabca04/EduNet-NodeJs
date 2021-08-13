@@ -17,26 +17,14 @@ block content
                         .card-body 
                             .row 
                                 .col-3 
-                                    img(src="photos/"+post.image, alt="" width="150px" )
+                                    img(src="photos/"+post.image, alt="" width="150px" ).card-img-top
                                 .col 
                                     h5 #{post.p_title}
                                     p.small #{post.content}
-                                    a.btn.btn-sm.float-end(style="background:#192a56;color:white") Read More >>
+                                    a.btn.btn-sm.float-end(href="/post/"+post.id) read more >>
             
             .col-3
                 .list-group 
-                    a.list-group-item.list-group-item-action.mb-3(href="")
-                        .d-flex.w-100.justify-content-between 
-                            h5.mb-1 list group heading 
-                            small 3 day ago 
-                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
-                        small and some more text 
-                    a.list-group-item.list-group-item-action.mb-3(href="")
-                        .d-flex.w-100.justify-content-between 
-                            h5.mb-1 list group heading 
-                            small 3 day ago 
-                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
-                        small and some more text 
                     a.list-group-item.list-group-item-action.mb-3(href="")
                         .d-flex.w-100.justify-content-between 
                             h5.mb-1 list group heading 
