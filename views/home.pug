@@ -1,0 +1,69 @@
+extends layout 
+
+
+block content 
+    .container-fluid.mt-3
+        .row 
+            .col-2
+                .list-group.list-group-flush.small
+                    a.list-group-item.list-group-item-action(href="",style="background:#192a56;color:white") Study Topics
+                    each cat in topics
+                        a.list-group-item.list-group-item-action(href="") #{cat.title}
+                   
+
+            .col-7
+                each post in posts 
+                    .card.mb-2
+                        .card-body 
+                            .row 
+                                .col-3 
+                                    img(src="photos/"+post.image, alt="" width="150px" )
+                                .col 
+                                    h5 #{post.p_title}
+                                    p.small #{post.content}
+                                    a.btn.btn-sm.float-end(style="background:#192a56;color:white") Read More >>
+            
+            .col-3
+                .list-group 
+                    a.list-group-item.list-group-item-action.mb-3(href="")
+                        .d-flex.w-100.justify-content-between 
+                            h5.mb-1 list group heading 
+                            small 3 day ago 
+                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
+                        small and some more text 
+                    a.list-group-item.list-group-item-action.mb-3(href="")
+                        .d-flex.w-100.justify-content-between 
+                            h5.mb-1 list group heading 
+                            small 3 day ago 
+                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
+                        small and some more text 
+                    a.list-group-item.list-group-item-action.mb-3(href="")
+                        .d-flex.w-100.justify-content-between 
+                            h5.mb-1 list group heading 
+                            small 3 day ago 
+                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
+                        small and some more text 
+                    a.list-group-item.list-group-item-action.mb-3(href="")
+                        .d-flex.w-100.justify-content-between 
+                            h5.mb-1 list group heading 
+                            small 3 day ago 
+                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
+                        small and some more text 
+                    a.list-group-item.list-group-item-action.mb-3(href="")
+                        .d-flex.w-100.justify-content-between 
+                            h5.mb-1 list group heading 
+                            small 3 day ago 
+                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
+                        small and some more text 
+                    a.list-group-item.list-group-item-action.mb-3(href="")
+                        .d-flex.w-100.justify-content-between 
+                            h5.mb-1 list group heading 
+                            small 3 day ago 
+                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
+                        small and some more text 
+                    a.list-group-item.list-group-item-action.mb-3(href="")
+                        .d-flex.w-100.justify-content-between 
+                            h5.mb-1 list group heading 
+                            small 3 day ago 
+                        p.mb-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. ur, hic vitae!
+                        small and some more text 

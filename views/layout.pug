@@ -1,0 +1,19 @@
+doctype html
+html 
+    head 
+        title edu 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    body 
+        .nav.navbar.navbar-expand-lg.navbar-dark.bg-primary 
+            .container 
+                navbar-brand.text-white EduNet 
+                form(action="",method="POST").d-flex.mx-auto
+                    input.form-control(type="text" placeholder="e.g php , python, variables etc." size="70" ) 
+                    input.btn.btn-info(type="submit" value="Go")
+                ul.navbar-nav.ms-auto
+                    a.nav-link(href="") Home
+                    a.nav-link(href="") About
+                    a.nav-link(href="") Login
+                    a.nav-link(href="") Registor
+                
+        block content

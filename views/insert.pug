@@ -1,0 +1,39 @@
+extends layout 
+
+
+block content 
+    .container.mt-4 
+        .row 
+            .col-3 
+                .card 
+                    .card-body 
+                        form(action="",method="post")
+                            .mb-2 
+                                label(for="title") Title 
+                                input.form-control(type="text",name="title",placeholder="enter title")
+                            .mb-2 
+                                input.btn.btn-warning.w-100(type="submit",name="send_topic",value="create Topic")
+
+            .col-9 
+                .card 
+                    .card-body 
+                        form(action="",method="post",enctype="multipart/form-data")
+                            .mb-3
+                                label(for="") title 
+                                input.form-control(type="text",name="p_title")  
+                            .mb-3
+                                label(for="") topic_id 
+                                select.form-control(type="text",name="topic_id")  
+                                    each cat in topics 
+                                        option(value=cat.id) #{cat.title}
+                            .mb-3 
+                                label(for="") author 
+                                input.form-control(type="text",name="author")
+                            .mb-3 
+                                label(for="") content 
+                                textarea.form-control(name="content", cols="30", rows="10")
+                            .mb-3 
+                                label(for="") image 
+                                input.form-control(type="file",name="image")
+                            .mb-3 
+                                input.btn.btn-success.w-100(type="submit")      
