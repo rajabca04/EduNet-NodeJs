@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+            .container.mt-4 
+                .row 
+                    .col-3 
+                        .card 
+                            .card-body 
+                                form(action="",method="post")
+                                    .mb-2 
+                                        label(for="title") Title 
+                                        input.form-control(type="text",name="title",placeholder="enter title")
+                                    .mb-2 
+                                        input.btn.btn-warning.w-100(type="submit",name="send_topic",value="create Topic")

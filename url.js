@@ -30,6 +30,7 @@ router.get("/insert",(req,res)=>{
         return res.render("insert",{topics: result});
     })
 })
+
 // read more >> button route
 router.get("/post/:id",(req,res)=>{
     conn.query("select * from posts JOIN topics ON posts.topic_id = topics.id where posts.id = ?;select * from topics",[req.params.id],(err,result) => {
@@ -41,10 +42,11 @@ router.post("/insert",upload.single("image"),(req,res)=>{
     sql = "insert into posts (p_title, topic_id, author, content, image, status) value (?,?,?,?,?,?)";
     conn.query(sql,[req.body.p_title,req.body.topic_id,req.body.author,req.body.content,req.file.filename,1],(err,result) => {
         if(err) throw err;
+        return res.redirect("/")
     })
 })
 
-// router.post("/insert",(req,res)=>{
+// router.post("/topic",(req,res)=>{
 //     sql = "insert into topics (title) value(?)";
 //     conn.query(sql,[req.body.title],(err,result)=>{
 //         if (err) throw err;
